@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Em que pais voce mora</title>
+</head>
+
+<body>
+  <h1> Seu pais</h1>
+  voce vive atualmente em <input type="text" name="textn1" id="textn1">
+  <input type="button" value="enter" onclick="pais()">
+  <div id="res">Meu pais</div>
+  <script>
+    var meuPais = window.document.getElementById('textn1')
+    var res = window.document.getElementById('res')
+
+    function pais() {
+      var meuPais = textn1.value.toLowerCase()
+      res.innerHTML = `<p> Sei pais atual e ${meuPais}<p>`
+      if (meuPais == 'brasil') {
+        res.innerHTML = `Voce eh brasileiro`
+      } else {
+        res.innerHTML = `Voce eh estrangeiro`
+      }
+    }
+  </script>
+</body>
+
+</html>
